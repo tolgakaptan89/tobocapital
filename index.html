@@ -15,6 +15,7 @@
       width: 100%;
       height: 100%;
       font-family: Georgia, serif;
+      background: #000; /* güvenlik */
     }
 
     body {
@@ -31,11 +32,12 @@
 
       display: flex;
       flex-direction: column;
-      min-height: 100vh;
+      min-height: 100dvh; /* 🔑 KRİTİK */
       text-align: center;
+      overflow-x: hidden;
     }
 
-    /* ORTA ALAN (LOGO) */
+    /* ORTA LOGO */
     .hero {
       flex: 1;
       display: flex;
@@ -48,7 +50,6 @@
       max-width: 90%;
       height: auto;
 
-      /* SOFT PREMIUM GLOW */
       filter:
         drop-shadow(0 0 12px rgba(255,255,255,0.20))
         drop-shadow(0 0 28px rgba(255,255,255,0.10));
@@ -56,9 +57,17 @@
 
     /* FOOTER */
     footer {
-      padding-bottom: 24px;
+      padding: 24px 0;
       font-size: 13px;
       color: rgba(255,255,255,0.75);
+    }
+
+    /* MOBİL BEYAZ ŞERİT KAPATICI */
+    body::after {
+      content: "";
+      display: block;
+      height: env(safe-area-inset-bottom);
+      background: transparent;
     }
   </style>
 </head>
