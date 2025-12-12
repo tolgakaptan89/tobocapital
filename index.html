@@ -1,24 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>TOBO Capital</title>
   <style>
-    body {
+    html, body {
       margin: 0;
-      background: #0b0f1a;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background: #0b1320; /* full arka plan */
       display: flex;
-      align-items: center;
+      flex-direction: column;
       justify-content: center;
-      height: 100vh;
+      align-items: center;
+      font-family: Arial, sans-serif;
     }
+
     img {
-      max-width: 90%;
-      max-height: 90%;
+      max-width: min(900px, 92vw);
+      max-height: 82vh;
+      object-fit: contain;
+    }
+
+    footer {
+      margin: 18px 0 24px;
+      color: #cfd6e4;
+      font-size: 14px;
+      opacity: 0.85;
+      text-align: center;
     }
   </style>
 </head>
 <body>
-  <img src="coming-soon.png" alt="TOBO Capital Coming Soon">
+
+  <img src="coming-soon.png" alt="TOBO Capital">
+
+  <footer>
+    © 2025 TOBO Capital. All rights reserved.
+  </footer>
+
 </body>
 </html>
+
