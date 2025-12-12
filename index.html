@@ -1,106 +1,58 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
   <title>TOBO Capital — Pre-Launch</title>
-  <meta name="description" content="TOBO Capital — Pre-Launch Phase." />
+
   <style>
-    :root{
-      --overlay-bg: rgba(10, 20, 30, 0.38);
-      --text: rgba(255,255,255,0.88);
-      --muted: rgba(255,255,255,0.72);
-      --shadow: rgba(0,0,0,0.40);
-    }
-
-    *{ box-sizing: border-box; }
-
-    html, body { height: 100%; }
-
-    body{
+    * {
       margin: 0;
-      min-height: 100vh;
-
-      /* 🌊 Background image (remote) */
-      background: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=2400&q=70")
-                  center/cover no-repeat fixed;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-      color: var(--text);
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    /* Dark soft layer so logo & footer read well */
-    .bg-dim{
-      position: fixed;
-      inset: 0;
-      background: radial-gradient(circle at 30% 20%, rgba(0,0,0,0.10), rgba(0,0,0,0.55));
-      pointer-events: none;
+    html, body {
+      width: 100%;
+      height: 100%;
+      font-family: Georgia, serif;
     }
 
-    .wrap{
-      position: relative;
-      width: min(1100px, 92vw);
-      min-height: 92vh;
+    body {
+      background:
+        linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+        url("beach.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
-      gap: 26px;
-      padding: 24px 0;
-    }
-
-    /* ✅ Blur “panel” (kare alan) */
-    .panel{
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      background: var(--overlay-bg);
-      border-radius: 18px;
-      padding: 34px 34px;
-      box-shadow: 0 22px 70px var(--shadow);
+      align-items: center;
       text-align: center;
-
-      /* subtle border without “krem frame” */
-      border: 1px solid rgba(255,255,255,0.14);
     }
 
-    .logo{
-      width: min(820px, 78vw);
-      max-width: 820px;
+    img {
+      width: 420px;
+      max-width: 90%;
       height: auto;
-      display: block;
-      filter: drop-shadow(0 14px 28px rgba(0,0,0,0.45));
-      border-radius: 10px; /* sadece görselin köşesi çok az yumuşasın, istemezsen 0 yap */
     }
 
-    footer{
-      text-align: center;
-      font-size: 14px;
-      color: var(--muted);
-      text-shadow: 0 2px 10px rgba(0,0,0,0.55);
-      padding-bottom: 10px;
-    }
-
-    /* Mobile: biraz küçült */
-    @media (max-width: 520px){
-      .panel{ padding: 18px; border-radius: 14px; }
-      footer{ font-size: 13px; }
+    footer {
+      margin-top: 24px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.75);
     }
   </style>
 </head>
 
 <body>
-  <div class="bg-dim" aria-hidden="true"></div>
 
-  <main class="wrap">
-    <section class="panel">
-      <img class="logo" src="coming-soon.png" alt="TOBO Capital — Pre-Launch" />
-    </section>
+  <img src="coming-soon.png" alt="TOBO Capital">
 
-    <footer>© 2025 TOBO Capital. All rights reserved.</footer>
-  </main>
+  <footer>
+    © 2025 TOBO Capital. All rights reserved.
+  </footer>
+
 </body>
 </html>
